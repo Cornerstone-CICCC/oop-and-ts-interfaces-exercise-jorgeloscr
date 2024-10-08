@@ -2,11 +2,12 @@
 // Create an interface for a function type that takes two numbers as arguments and returns their sum.
 // Implement the function using the interface and test it.
 
-interface SumFunction {
 
+interface SumFunction {
+    (a: number, b: number): number;
 }
 
-const sum = (a, b) => a + b;
+const sum: SumFunction = (a, b) => a + b;
 
 console.log(sum(10, 20)); 
 // Expected Output: 30

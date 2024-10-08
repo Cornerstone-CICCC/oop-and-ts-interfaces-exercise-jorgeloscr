@@ -3,15 +3,17 @@
 // Create a function that takes this object as a parameter and logs the model and color (if available).
 
 interface Car {
-
+  model: string;
+  color?: string; 
 }
 
-const describeCar = (car) => {
+const describeCar = (car: Car) => {
   console.log(`Model: ${car.model}`);
   if (car.color) {
     console.log(`Color: ${car.color}`);
   }
 };
+
 
 describeCar({ model: "Tesla" });
 // Expected Output:
